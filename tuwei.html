@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    <title>Where is my love</title>
+    </head>
+    <body>
+        <img src="logo_main2011.jpg"/>
+        <style type="text/css">
+            .main{
+              color: #666;margin-top: 50px;font-size: xx-large;
+            }
+            /* 定义keyframe动画，命名为blink */
+            @keyframes blink{
+              0%{opacity: 1;}
+              100%{opacity: 0;} 
+            }
+            /* 添加兼容性前缀 */
+            @-webkit-keyframes blink {
+                0% { opacity: 1; }
+                100% { opacity: 0; }
+            }
+            @-moz-keyframes blink {
+                0% { opacity: 1; }
+                100% { opacity: 0; }
+            }
+            @-ms-keyframes blink {
+                0% {opacity: 1; } 
+                100% { opacity: 0;}
+            }
+            @-o-keyframes blink {
+                0% { opacity: 1; }
+                100% { opacity: 0; }
+            }
+            /* 定义blink类*/
+            .blink{
+                color: #dd4814;
+                animation: blink 1s linear infinite;  
+                /* 其它浏览器兼容性前缀 */
+                -webkit-animation: blink 1s linear infinite;
+                -moz-animation: blink 1s linear infinite;
+                -ms-animation: blink 1s linear infinite;
+                -o-animation: blink 1s linear infinite;
+            }
+            </style>
+        <div class="main">
+            <span class="blink">我的对象在哪里？？</span>
+        </div>   
+        <p>
+            <img id="1" src="1520776317135464.jpeg_scaling"/> 
+            <img id="2" src="1520776317871819.jpeg_scaling"/>
+        </p>
+        <p>
+            <img id="3" src="1520776318489552.jpeg_scaling"/>
+            <img id="4" src="1520776318726651.jpeg_scaling"/>
+        </p>
+    </body>
+    <script type="text/javascript">
+        var img =document.getElementById("1");
+        var flash_btn = document.getElementById("flash")
+        setInterval(function(){
+            img.style.opacity = 0;  //图片隐藏
+        },200)
+        //再次调用setInterval()函数,每隔0.5秒显示 时间差就可以形成图片闪烁功能;
+        setInterval(function(){
+            img.style.opacity = 1;  //图片显示
+        },400)
+        var img2 =document.getElementById("2");
+        var flash_btn = document.getElementById("flash")
+        setInterval(function(){
+            img2.style.opacity = 1;  //图片隐藏
+        },300)
+        //再次调用setInterval()函数,每隔0.5秒显示 时间差就可以形成图片闪烁功能;
+        setInterval(function(){
+            img2.style.opacity = 0;  //图片显示
+        },500)
+        var img3 =document.getElementById("3");
+        var flash_btn = document.getElementById("flash")
+        setInterval(function(){
+            img3.style.opacity = 1;  //图片隐藏
+        },200)
+        //再次调用setInterval()函数,每隔0.5秒显示 时间差就可以形成图片闪烁功能;
+        setInterval(function(){
+            img3.style.opacity = 0;  //图片显示
+        },500)
+        var img4 =document.getElementById("4");
+        var flash_btn = document.getElementById("flash")
+        setInterval(function(){
+            img4.style.opacity = 0;  //图片隐藏
+        },250)
+        //再次调用setInterval()函数,每隔0.5秒显示 时间差就可以形成图片闪烁功能;
+        setInterval(function(){
+            img4.style.opacity = 1;  //图片显示
+        },500)
+    </script>
+</html>
